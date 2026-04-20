@@ -42,7 +42,7 @@ entrez_rank_to_gsea = function(my_entrez_rank, species, gene_collections  = NULL
 }
 
 H_scrto <- h_df %>% filter(gene_symbol %in% scrto$symbol)
-#####*H whole genes*#####"KICH", "READ", "LIHC", "BLCA", "STAD", 
+#####*H single secretome removal*#####"KICH", "READ", "LIHC", "BLCA", "STAD", 
 map(list("KICH", "BLCA", "READ", "LIHC", "STAD"),
     function(cancer0){
       a <- read_csv(
